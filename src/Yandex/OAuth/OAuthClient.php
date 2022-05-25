@@ -123,6 +123,14 @@ class OAuthClient extends AbstractServiceClient
     }
 
     /**
+     * @return string
+     */
+    public function getRefreshToken()
+    {
+        return $this->refreshToken;
+    }
+
+    /**
      * @param  string $refreshToken
      * @return self
      */

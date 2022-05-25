@@ -69,6 +69,40 @@ class OAuthClientTest extends TestCase
     }
 
     /**
+     * @param $refreshToken
+     * @param $expectedRefreshToken
+     *
+     * @dataProvider dataSetGetRefreshToken
+     */
+    public function testSetGetRefreshToken($refreshToken, $expectedRefreshToken)
+    {
+        $oauthClient = $this->getOauthClient();
+
+        $this->assertEmpty($oauthClient->getRefreshToken());
+
+        $oauthClient->setRefreshToken($refreshToken);
+
+        $this->assertEquals($expectedRefreshToken, $oauthClient->getRefreshToken());
+    }
+
+    /**
+     * @return array
+     */
+    public function dataSetGetRefreshToken()
+    {
+        return [
+            'empty refresh token' => [
+                'refreshToken' => null,
+                'expectedRefreshToken' => null,
+            ],
+            'not empty refresh token' => [
+                'refreshToken' => 'test',
+                'expectedRefreshToken' => 'test',
+            ],
+        ];
+    }
+
+    /**
      * @param $accessToken
      * @param $expectedAccessToken
      *
