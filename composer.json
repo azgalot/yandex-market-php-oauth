@@ -1,12 +1,12 @@
 {
-  "name": "yandex-market/yandex-market-php-oauth",
-  "description": "Yandex PHP OAuth library.",
+  "name": "azgalot/php-oauth-yandex-market",
+  "description": "Yandex OAuth library.",
   "keywords":["yandex","sdk", "OAuth"],
   "type":"library",
   "license": "MIT",
   "minimum-stability": "dev",
   "require": {
-    "yandex-market/yandex-market-php-common": "1.*.*"
+    "azgalot/yandex-market-common-php": "1.*.*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0",
@@ -17,6 +17,10 @@
     {
       "name": "Kirill Litvinov",
       "email": "ym-sdk@yandex-team.ru"
+    },
+    {
+      "name": "Andrey Artahanov",
+      "email": "azgalot9@gmail.com"
     }
   ],
   "autoload": {
